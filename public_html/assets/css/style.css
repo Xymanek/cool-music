@@ -1,0 +1,613 @@
+/* Remove default browser styles */
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Reusable */
+
+html {
+    font-family: sans-serif;
+}
+
+img.fit-parent-horizontal {
+    max-width: 100%;
+    height: auto;
+}
+
+.no-border-bottom {
+    border-bottom: none !important;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 5px;
+
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.btn-confirm {
+    color: white;
+    background-color: #279dff;
+}
+
+.btn-success {
+    color: white;
+    background-color: #28a745;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #dc3545;;
+}
+
+.btn[disabled] {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.btn-big {
+    font-size: large;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Reusable - navigation */
+
+.nav-item-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation-item {
+    padding: 5px;
+    background-color: #279dff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation-item.current {
+    font-weight: bold;
+    color: #00ff15;
+}
+
+/* Reusable - table */
+
+.my-table {
+    width: 100%;
+    border-spacing: 1px;
+}
+
+.my-table thead th {
+    border-bottom: black solid 2px;
+}
+
+.my-table td {
+    vertical-align: top;
+}
+
+.my-table tr:not(:first-child) td {
+    border-top: #777777 solid 1px;
+}
+
+/* This needed to make content-wrap fill the entire viewport vertically */
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjustments to the stars library */
+
+.starability-basic {
+    min-height: unset;
+}
+
+.starability-result[data-rating="4.5"]::after {
+    width: 135px;
+}
+
+.starability-result[data-rating="3.5"]::after {
+    width: 105px;
+}
+
+.starability-result[data-rating="2.5"]::after {
+    width: 75px;
+}
+
+.starability-result[data-rating="1.5"]::after {
+    width: 45px;
+}
+
+/* Header */
+
+#desktop-warning {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+@media screen and (min-width: 992px) {
+    #desktop-warning {
+        display: block !important;
+    }
+}
+
+header#site-header {
+    background-color: #5cb2f2;
+    padding: 5px;
+}
+
+header#site-header .wrap {
+    max-width: 350px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+header#site-header .title-container {
+    margin-right: 5px;
+    flex-grow: 60;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+header#site-header img {
+    max-height: 120px;
+}
+
+@media screen and (max-width: 230px) {
+    header#site-header img {
+        display: none;
+    }
+}
+
+/* Main menu */
+
+#main-menu {
+    justify-content: center;
+}
+
+#main-menu .navigation-item {
+    margin: 5px 5px 0;
+}
+
+/* Content */
+
+#page-main-wrap {
+    flex-grow: 1;
+
+    background: url("../images/rock-band-566085_640.jpg") repeat-y top left;
+    background-size: cover;
+}
+
+#content-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.content-box {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.content-box-header {
+    text-align: center;
+    color: #5cb2f2;
+    flex-grow: 1;
+}
+
+.content-box-header-with-actions {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: -10px; /* Neutralize margin for first row */
+}
+
+.content-box-header-with-actions > * {
+    margin-top: 10px; /* Add some top margin for space if wrapped */
+}
+
+.content-box-header-with-actions:not(:last-child) {
+    margin-bottom: 10px; /* If not last thing in parent, add some space under ourselves */
+}
+
+.content-box-header-with-actions .content-box-header {
+    margin-right: 5px;
+}
+
+.content-box-header-with-actions div:last-child a:not(:last-child) {
+    margin-right: 5px;
+}
+
+.content-box-header-with-actions form {
+    display: inline;
+}
+
+/* Album artwork */
+
+.album-artwork-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album-artwork-wrap img {
+    border: black solid 5px;
+}
+
+/* Track details */
+
+.track-entry-image {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.track-entry-image > img {
+    max-height: 130px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 350px) {
+    .track-entry-image > img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    .track-page-artwork {
+        display: none;
+    }
+}
+
+.track-detailed-playback {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.track-info-container {
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+.track-info-container > div:first-child {
+    flex-grow: 1;
+}
+
+.track-info-container .track-name {
+    font-size: 30px;
+}
+
+.track-info-container .album-name, .track-info-container .artist-name {
+    font-style: italic;
+    color: #3f3f3f;
+    font-size: 17px;
+}
+
+.track-info-container .genre-name {
+    font-size: 25px;
+    font-style: italic;
+    color: #3f3f3f;
+}
+
+.track-info-container .right-column {
+    text-align: right;
+}
+
+.track-info-container .details-link-container {
+    padding: 5px 0;
+
+    display: flex;
+    justify-content: end;
+}
+
+.track-info-container .details-link-container > *:not(:last-child) {
+    margin-right: 5px;
+}
+
+.track-info-container .details-link-container a {
+    text-decoration: none;
+}
+
+.track-detailed-playback audio {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.track-detailed-playback .sign-in-required {
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: black solid;
+    padding: 5px;
+    background-color: #726f6f;
+    color: white;
+}
+
+/* Track inside of playlist management */
+
+.track-playlists-container {
+    margin-top: 5px;
+}
+
+.track-playlists-container .playlist-row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.track-playlists-container .playlist-link {
+    flex-grow: 1;
+    margin-right: 10px;
+    text-align: center;
+}
+
+/* Reviews */
+
+.track-review:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: #777777 solid 1px;
+    margin-bottom: 10px;
+}
+
+.track-review .review-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-review .review-username {
+    font-weight: bold;
+}
+
+.track-review-form .rating-submit-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.track-review-form textarea {
+    resize: vertical;
+}
+
+/* Album preview */
+
+.album-preview {
+    display: flex;
+}
+
+.album-preview .album-artwork {
+    max-width: 150px;
+    height: max-content;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 370px) {
+    .album-preview {
+        display: block;
+    }
+
+    .album-preview .album-artwork {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.album-details-container {
+    flex-grow: 1;
+}
+
+.album-header-row .album-name {
+    font-size: 20px;
+}
+
+.album-details-container .track-row {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.album-details-container .track-row:not(:last-child) {
+    border-bottom: #a7a7a7 solid 1px;
+}
+
+.album-details-container .track-name {
+    flex-grow: 1;
+}
+
+.album-details-container .track-genre {
+    margin: 0 5px;
+}
+
+/* Genre list */
+
+.genre-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.genre-link {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Album list */
+
+.album-list-item {
+    display: flex;
+}
+
+.album-list-item .album-artwork {
+    flex-shrink: 0;
+    height: max-content;
+    max-width: 30%;
+}
+
+.album-list-item .name-link {
+    margin-left: 10px;
+    flex-grow: 1;
+    flex-basis: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.album-list-item .album-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.album-list-item .artist-name {
+    font-size: 20px;
+}
+
+/* Plans (homepage) */
+
+.plan-box {
+    display: flex;
+}
+
+.plan-box .plan-image {
+    margin-right: 10px;
+    width: 40%;
+    height: max-content;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 370px) {
+    .plan-box {
+        display: block;
+    }
+
+    .plan-box .plan-image {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+.plan-box .plan-header-row {
+    display: flex;
+}
+
+.plan-box .plan-name {
+    flex-grow: 1;
+    font-size: 22px;
+    color: #862828;
+}
+
+.plan-box .plan-price {
+    font-size: 18px;
+}
+
+.plan-box .plan-description {
+    font-style: italic;
+    color: #3f3f3f;
+}
+
+/* Forms */
+
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.form-row label {
+    width: 30%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-row input {
+    border-radius: 5px;
+    flex-grow: 1;
+    padding: 5px;
+    font-size: medium;
+}
+
+label.full-width {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+label.full-width input {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: medium;
+    width: 100%;
+}
+
+/* Footer */
+
+#site-footer {
+    background-color: #5cb2f2;
+    padding: 5px;
+
+    text-align: center;
+    color: white;
+}
